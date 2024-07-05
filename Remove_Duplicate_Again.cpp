@@ -1,7 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void print(list<int> &head)
+{
+    auto it = head.begin();
+    while (it != head.end())
+    {
+        cout << *it << " ";
+        it++;
+    }
+}
 
+void printReverse(list<int> &head) {
+    auto it = head.end();
+    it--;
+    while (true) {
+        cout << *it << " ";
+        if (it == head.begin()) {
+            break;
+        }
+        it--;
+    }
+    cout << endl;
+}
 int main()
 {
     list<int> head;
@@ -15,11 +36,6 @@ int main()
     }
     head.sort();
     head.unique();
-    auto it = head.begin();
-    while (it != head.end())
-    {
-        cout << *it << " ";
-        it++;
-    }
+    print(head);
     return 0;
 }
