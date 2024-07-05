@@ -11,18 +11,7 @@ void print(list<int> &head)
     }
 }
 
-void printReverse(list<int> &head) {
-    auto it = head.end();
-    it--;
-    while (true) {
-        cout << *it << " ";
-        if (it == head.begin()) {
-            break;
-        }
-        it--;
-    }
-    cout << endl;
-}
+
 int main()
 {
     list<int> head;
